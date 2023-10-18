@@ -2,21 +2,19 @@ luiz@DESKTOP-9DUTH2H:~/terraform/learn-terraform-aws-instance$ ansible-playbook 
 [WARNING]: Invalid characters were found in group names but not replaced, use -vvvv to see details
 
 PLAY [ansible-terraform] ***********************************************************************************************
+
 TASK [Gathering Facts] *************************************************************************************************
-The authenticity of host '52.35.63.144 (52.35.63.144)' can't be established.
-ED25519 key fingerprint is ....
+The authenticity of host '34.212.23.141 (34.212.23.141)' can't be established.
+ED25519 key fingerprint is ...
 This key is not known by any other names
 Are you sure you want to continue connecting (yes/no/[fingerprint])? yes
-ok: [52.35.63.144]
+ok: [34.212.23.141]
 
-TASK [criando arquivo index.html] **************************************************************************************
-changed: [52.35.63.144]
+TASK [instalando python e venv] ****************************************************************************************
+changed: [34.212.23.141]
 
-TASK [criando servidor] ************************************************************************************************
-changed: [52.35.63.144]
+TASK [instalando dependencias com pip] *********************************************************************************
+changed: [34.212.23.141]
 
 PLAY RECAP *************************************************************************************************************
-52.35.63.144               : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0
-
-
-
+34.212.23.141              : ok=3    changed=2    unreachable=0    failed=0    skipped=0    rescued=0    ignored=0

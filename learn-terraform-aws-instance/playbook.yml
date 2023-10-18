@@ -1,8 +1,18 @@
 - hosts: ansible-terraform
   tasks:
-  - name: criando arquivo index.html
-    copy: 
-      dest: /home/ubuntu/index.html
-      content: <h1> criação automatizada pelo ansible <h1>
-  - name: criando servidor
-    shell: "nohup busybox httpd -f -p 8080 &"
+  - name: instalando python e venv
+    apt:
+      pkg:
+      - python3
+      - virtualenv
+      update_cache: yes
+    become: yes
+  - name: instalando dependencias com pip
+    pip: 
+      virtualenv: /home/ubuntu/tcc/venv
+      name: 
+      - django
+      - djangorestframework
+
+
+     

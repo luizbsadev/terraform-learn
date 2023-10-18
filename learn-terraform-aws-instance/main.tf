@@ -19,6 +19,6 @@ resource "aws_instance" "app_server" {
   key_name      = "IaC-alura"
 
   tags = {
-    Name = "teste automatizando"
+    Name = "fazendo algumas instalações com ansible"
   }
 }
