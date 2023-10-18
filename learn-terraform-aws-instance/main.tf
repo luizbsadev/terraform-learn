@@ -17,12 +17,6 @@ resource "aws_instance" "app_server" {
   ami           = "ami-03f65b8614a860c29"
   instance_type = "t2.micro"
   key_name      = "IaC-alura"
-  user_data     = <<-EOF
-                  #!/bin/bash
-                  cd /home/ubuntu
-                  echo "<h1> feito com terraform <h1>" > index.html
-                  nohup busybox httpd -f -p 8080 &  
-                  EOF
 
   tags = {
     Name = "teste automatizando"
